@@ -11,7 +11,16 @@ body {
   height: 100vh;
 }
 
-.container {
+li {
+  list-style-type: none;
+}
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.slider {
   position: relative;
   overflow: hidden;
   width: 100vw;
@@ -27,7 +36,7 @@ body {
   transition: transform 0.5s ease-in-out;
 }
 
-.sidebar > div {
+.sidebar > li {
   height: 100%;
   width: 100%;
   display: flex;
@@ -52,7 +61,7 @@ body {
   transition: transform 0.5s ease-in-out;
 }
 
-.main-slide > div {
+.main-slide > li {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -77,20 +86,20 @@ button:focus {
   outline: none;
 }
 
-.container .controls button {
+.slider .controls button {
   position: absolute;
   left: 35%;
   top: 50%;
   z-index: 100;
 }
 
-.container .controls .down-button {
+.slider .controls .down-button {
   transform: translateX(-100%);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-.container .controls .up-button {
+.slider .controls .up-button {
   transform: translateY(-100%);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
